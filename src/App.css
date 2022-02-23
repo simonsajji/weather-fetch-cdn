@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Caveat:wght@500&family=Comfortaa:wght@300&family=Cookie&family=Kite+One&family=Kumbh+Sans:wght@300&family=Lobster&family=Montserrat:wght@200&family=Raleway:wght@300&family=Rancho&family=Satisfy&display=swap');
+
+body{
+  width:100%;
+  height:100%;
+  background-color:black;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e4a4e;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #495355;
+}
+
+.App{
+  width:100%;
+  height:100vh;
+  background-size: cover;
+  display:flex;
+  flex-direction:row;
+  font-family: 'Kite One', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  
+  
+  
+  
+}
+
+.RightPanel{
+  flex:0.9;
+  background-color:rgba(4, 3, 15, 0.9);
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:left;
+  padding-left:1rem;
+
+  
+  justify-content:right;
+}
+.RightPanel .Inputs{
+  width:95%;
+  box-sizing:border-box;
+  margin:3rem 0;
+
+  display:flex;
+  
+  align-items:center;
+  justify-content:right;
+  height:10%;
+  gap:1rem;
+}
+
+.Inputs input[type="text"]{
+  width:50%;
+  flex:3.5;
+  padding:0.5rem 0.4rem;
+  background:transparent;
+  color: rgb(224, 224, 231);
+  outline:0;
+  border:0;
+  border-bottom:0.03rem solid rgb(85, 83, 83);
+  margin-right:0.3rem;
+  font-size: 1rem;
+  /* font-weight: bolder; */
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+
+ 
+  
+}
+
+
+
+.Inputs input[type="text"]::placeholder {
+  color: rgb(176, 176, 184);
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+
+}
+.Inputs input[type="button"]{
+  flex:1;
+
+  width:25%;
+  padding:1rem;
+  padding-bottom:1rem;
+  background:white;
+  outline:0;
+  border:0;
+  background: url("../src/images/search1.png") no-repeat 0 0;
+  background-size: contain;
+  opacity:0.7;
+  padding-right:0;
+ 
+  height:3.3rem;
+  
+}
+
+.Inputs input[type="button"]:hover{
+  opacity:1;
+}
+
+
+.RightPanel .topcities{
+  padding-left:0.3rem;
+
+  height:12rem;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color:rgb(78, 123, 124);
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+
+  font-size:1rem;
+  text-transform: capitalize;
+  
+  
+
+}
+.topcities div{
+  margin:0.2rem 0.2rem;
+  cursor:pointer;
+  height:6rem;
+  display:flex;
+  align-items: center;
+  padding:0.3rem;
+ 
+}
+
+.topcities div:hover{
+  color:cadetblue;
+}
+
+.topcities .citieshead{
+  color:rgb(78, 123, 124);
+  font-family: 'Raleway', sans-serif;
+  font-size:1.2rem;
+  text-transform:none;
+  margin:0;
+  height:1rem;
+  padding:0.1erm;
+ 
+
+}
+
+.topcities hr{
+  width:21%;
+  margin-top:0.2rem;
+  margin-left:0;
+  border:0;
+  border-bottom: 0.02rem solid rgb(102, 112, 112);
+}
+
+
+
+.RightPanel .currentlocweather{
+  height:17rem;
+  margin:2rem 0;
+  width:96%;
+  border:0.01rem solid rgba(22, 22, 22, 0.4);
+  background-color:rgba(12, 23, 36, 0.4);
+  border-radius: 0.5rem;
+  padding:0.4rem;
+  box-sizing: border-box;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  box-shadow: rgba(20, 18, 18, 0.54) 0px 1px 4px;
+  
+
+}
+
+.currentlocweather .localweatherhead{
+  color:rgb(133, 125, 116);
+  margin:0.5rem;
+  font-size: 0.9rem;
+  
+}
+
+.currentlocweather .localcity{
+  color:rgb(130, 74, 182);
+  margin:0.3rem;
+  margin-top:1.5rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: lighter;
+  font-size:1.2rem;
+}
+.currentlocweather .wrapper{
+  display:flex;
+  /* align-items:center; */
+  
+  
+  flex-direction:row;
+
+}
+
+.currentlocweather .wrapperdes{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+ 
+  width:100%;
+  align-items:left;
+  font-family: 'Comfortaa', cursive;
+  
+
+}
+
+.currentlocweather .localtemp{
+  color:rgb(89, 104, 117);
+  margin:0.2rem;
+  height:8rem;
+  font-size:4.1rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Comfortaa', cursive;
+  display: flex;
+  justify-content: space-between;
+  color:rgb(19, 66, 56);
+}
+.localtemp span{
+  font-size: 4.5rem;
+  margin-top:0.1rem;
+  color:rgb(128, 128, 85);
+}
+.localtemp sup{
+  color:rgb(103, 146, 184);
+  margin:0rem;
+  font-size:1.5rem;
+
+}
+
+
+
+.wrapperdes .localhumidity{
+  font-size: 1.2rem;
+  color:rgb(80, 45, 45);
+  margin:0.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap:2rem;
+  flex-wrap: nowrap;
+ 
+  font-family: 'Kite One', sans-serif;
+  font-family: 'Cairo', sans-serif;
+ 
+  
+}
+
+.localhumidity:nth-child(2){
+  color:rgb(49, 67, 102);
+}
+
+.percentage::after{
+  content:"%"
+}
+
+
+
+
+
+.Left{
+  flex:2;
+  background-color:rgba(4, 3, 15, 0.75);
+  height:100%;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-sizing: border-box;
+  overflow-y:scroll;
+  flex-wrap: nowrap;
+  /* gap:1rem; */
+
+}
+
+
+.Left .flexbox{
+ 
+  background-color: rgba(2, 9, 14, 0.2);
+  width:98%;
+  margin:1.5rem 0;
+  padding:2rem 1rem;
+  
+  border-radius:0.4rem;
+  box-sizing: border-box;
+  box-shadow: rgba(68, 68, 68, 0.24) 3px 1px 3px;
+  display:flex;
+  flex-wrap: nowrap;
+
+  
+  
+}
+
+.flexbox .flex1{
+  flex:1;
+  height: 8rem;
+  display:flex;
+  align-items: center;
+  justify-content:right;
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+  font-family: 'Comfortaa', cursive;
+  color:wheat;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  
+  
+  
+}
+
+.flex1 sup{
+  font-size: 1.4rem;
+  margin-bottom: 5rem;
+  color:rgb(196, 174, 147);
+}
+
+.flexbox .flex2, .flexbox .flex3{
+  flex:2;
+  height: 7rem;
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+  justify-content:center;
+  font-family: 'Kumbh Sans', sans-serif;
+  flex-wrap: nowrap;
+  
+  
+  
+}
+.flexbox .flex3{
+
+  flex:1;
+  margin-right: 4rem;
+
+  gap:0.5rem;
+  
+}
+
+
+.hum, .wind{
+  display: flex;
+  justify-content:space-between;
+  color:rgb(53, 187, 142);
+  font-size:1.1rem;
+
+
+}
+
+.wind{
+  color:rgb(167, 115, 18);
+}
+
+
+
+
+.cname{
+  font-size:2.5rem;
+  margin-top: 1.5rem;
+  /* font-family: 'Comfortaa', cursive; */
+  color:rgb(161, 221, 221);
+  
+  
+}
+
+
+@media only screen and (max-height: 599px){
+
+ .App{
+   height:100%;
+ }
+
+
+
+}
